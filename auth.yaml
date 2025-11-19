@@ -4,9 +4,9 @@ kind: Group
 metadata:
   name: engineering
   title: Engineering Department
-  description: "Main engineering department responsible for all technical development"
+  description: "Main engineering Department responsible for all technical development"
 spec:
-  type: department
+  type: Department
   children: [frontend-team, backend-team, devops-team]
   profile:
     displayName: Engineering
@@ -21,7 +21,7 @@ metadata:
   title: Frontend Team
   description: "Team responsible for frontend development and UI/UX"
 spec:
-  type: team
+  type: Team
   parent: engineering
   profile:
     displayName: Frontend Team
@@ -35,7 +35,7 @@ metadata:
   title: Backend Team
   description: "Team responsible for backend services and APIs"
 spec:
-  type: team
+  type: Team
   parent: engineering
   profile:
     displayName: Backend Team
@@ -49,7 +49,7 @@ metadata:
   title: DevOps Team
   description: "Team responsible for infrastructure and deployment"
 spec:
-  type: team
+  type: Team
   parent: engineering
   profile:
     displayName: DevOps Team
