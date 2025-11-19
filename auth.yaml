@@ -3,10 +3,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: engineering
-  title: Engineering Department
-  description: "Main engineering Department responsible for all technical development"
+  title: Engineering department
+  description: "Main engineering department responsible for all technical development"
 spec:
-  type: Department
+  type: department
   children: [frontend-team, backend-team, devops-team]
   profile:
     displayName: Engineering
@@ -18,13 +18,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: frontend-team
-  title: Frontend Team
-  description: "Team responsible for frontend development and UI/UX"
+  title: Frontend team
+  description: "team responsible for frontend development and UI/UX"
 spec:
-  type: Team
+  type: team
   parent: engineering
   profile:
-    displayName: Frontend Team
+    displayName: Frontend team
     email: frontend@example.com
 
 ---
@@ -32,13 +32,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: backend-team
-  title: Backend Team
-  description: "Team responsible for backend services and APIs"
+  title: Backend team
+  description: "team responsible for backend services and APIs"
 spec:
-  type: Team
+  type: team
   parent: engineering
   profile:
-    displayName: Backend Team
+    displayName: Backend team
     email: backend@example.com
 
 ---
@@ -46,13 +46,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: devops-team
-  title: DevOps Team
-  description: "Team responsible for infrastructure and deployment"
+  title: DevOps team
+  description: "team responsible for infrastructure and deployment"
 spec:
-  type: Team
+  type: team
   parent: engineering
   profile:
-    displayName: DevOps Team
+    displayName: DevOps team
     email: devops@example.com
 
 ---
