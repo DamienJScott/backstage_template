@@ -1,298 +1,98 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: engineering
-  description: |
-    Engineering department responsible for all software development,
-    infrastructure, and technical operations across the organization.
-  tags:
-    - department
-    - technical
-    - r&d
+  title: Engineering Department
+  description: "Main engineering department responsible for all technical development"
 spec:
   type: department
-  children: ["frontend-team", "backend-team", "data-team", "devops-team"]
+  children: [frontend-team, backend-team, devops-team]
   profile:
-    displayName: Engineering Department
-    email: engineering@company.com
-    picture: https://avatars.githubusercontent.com/u/12345678?s=200&v=4
+    displayName: Engineering
+    email: engineering@example.com
+    picture: https://example.com/engineering.jpg
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: frontend-team
-  description: |
-    Frontend development team focused on user interfaces, web applications,
-    and customer-facing experiences. Works closely with design and product teams.
-  tags:
-    - frontend
-    - web
-    - ui/ux
+  title: Frontend Team
+  description: "Team responsible for frontend development and UI/UX"
 spec:
   type: team
   parent: engineering
-  children: ["mobile-squad", "web-squad"]
   profile:
     displayName: Frontend Team
-    email: frontend@company.com
-    picture: https://avatars.githubusercontent.com/u/23456789?s=200&v=4
+    email: frontend@example.com
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: backend-team
-  description: |
-    Backend development team responsible for APIs, services, databases,
-    and backend infrastructure. Ensures scalability and reliability.
-  tags:
-    - backend
-    - api
-    - infrastructure
+  title: Backend Team
+  description: "Team responsible for backend services and APIs"
 spec:
   type: team
   parent: engineering
-  children: ["api-squad", "database-squad"]
   profile:
     displayName: Backend Team
-    email: backend@company.com
-    picture: https://avatars.githubusercontent.com/u/34567890?s=200&v=4
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: product
-  description: |
-    Product management department responsible for product strategy,
-    roadmap planning, and feature prioritization across all teams.
-  tags:
-    - product
-    - strategy
-    - roadmap
-spec:
-  type: department
-  children: ["product-management", "ux-design"]
-  profile:
-    displayName: Product Department
-    email: product@company.com
-    picture: https://avatars.githubusercontent.com/u/45678901?s=200&v=4
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: executives
-  description: |
-    Executive leadership team responsible for company strategy, vision,
-    and overall business direction.
-  tags:
-    - leadership
-    - executives
-    - c-suite
-spec:
-  type: department
-  profile:
-    displayName: Executive Leadership
-    email: executives@company.com
-    picture: https://avatars.githubusercontent.com/u/56789012?s=200&v=4
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: john-doe
-  description: |
-    Senior Software Engineer with 8+ years experience in full-stack development.
-    Currently leading the frontend architecture initiatives.
-  tags:
-    - senior
-    - frontend
-    - architect
-spec:
-  profile:
-    displayName: John Doe
-    email: john.doe@company.com
-    picture: https://avatars.githubusercontent.com/u/12345?s=200&v=4
-  memberOf: ["frontend-team", "engineering"]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: jane-smith
-  description: |
-    Principal Backend Engineer specializing in distributed systems and microservices.
-    Tech lead for the backend platform team.
-  tags:
-    - principal
-    - backend
-    - distributed-systems
-spec:
-  profile:
-    displayName: Jane Smith
-    email: jane.smith@company.com
-    picture: https://avatars.githubusercontent.com/u/23456?s=200&v=4
-  memberOf: ["backend-team", "engineering"]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: sarah-johnson
-  description: |
-    Product Manager for the customer-facing applications.
-    Focus on user experience and business value delivery.
-  tags:
-    - product-manager
-    - ux
-    - customer-success
-spec:
-  profile:
-    displayName: Sarah Johnson
-    email: sarah.johnson@company.com
-    picture: https://avatars.githubusercontent.com/u/34567?s=200&v=4
-  memberOf: ["product-management", "product"]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: michael-chen
-  description: |
-    Chief Technology Officer responsible for technical vision and strategy.
-    Previously founded two successful startups in the AI space.
-  tags:
-    - cto
-    - executive
-    - ai
-spec:
-  profile:
-    displayName: Michael Chen
-    email: michael.chen@company.com
-    picture: https://avatars.githubusercontent.com/u/45678?s=200&v=4
-  memberOf: ["executives"]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: emily-rodriguez
-  description: |
-    UX/UI Designer focused on creating intuitive and accessible user interfaces.
-    Works closely with frontend and product teams to deliver exceptional user experiences.
-  tags:
-    - designer
-    - ux
-    - accessibility
-spec:
-  profile:
-    displayName: Emily Rodriguez
-    email: emily.rodriguez@company.com
-    picture: https://avatars.githubusercontent.com/u/56789?s=200&v=4
-  memberOf: ["ux-design", "product"]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: david-patel
-  description: |
-    DevOps Engineer specializing in Kubernetes, CI/CD, and cloud infrastructure.
-    Responsible for maintaining production reliability and developer tooling.
-  tags:
-    - devops
-    - kubernetes
-    - sre
-spec:
-  profile:
-    displayName: David Patel
-    email: david.patel@company.com
-    picture: https://avatars.githubusercontent.com/u/67890?s=200&v=4
-  memberOf: ["devops-team", "engineering"]
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: mobile-squad
-  description: |
-    Mobile development squad focused on iOS and Android applications.
-    Implements native mobile experiences and integrates with backend services.
-  tags:
-    - mobile
-    - ios
-    - android
-spec:
-  type: squad
-  parent: frontend-team
-  profile:
-    displayName: Mobile Squad
-    email: mobile@company.com
-    picture: https://avatars.githubusercontent.com/u/789012?s=200&v=4
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: api-squad
-  description: |
-    API development squad responsible for building and maintaining RESTful and GraphQL APIs.
-    Focuses on performance, security, and developer experience.
-  tags:
-    - api
-    - rest
-    - graphql
-spec:
-  type: squad
-  parent: backend-team
-  profile:
-    displayName: API Squad
-    email: apis@company.com
-    picture: https://avatars.githubusercontent.com/u/890123?s=200&v=4
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: product-management
-  description: |
-    Product management team responsible for product strategy, roadmap,
-    and feature prioritization across all product lines.
-  tags:
-    - product-management
-    - roadmap
-    - strategy
-spec:
-  type: team
-  parent: product
-  profile:
-    displayName: Product Management
-    email: product-mgmt@company.com
-    picture: https://avatars.githubusercontent.com/u/901234?s=200&v=4
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: ux-design
-  description: |
-    UX/UI design team focused on user research, wireframing, prototyping,
-    and creating high-fidelity designs for all products.
-  tags:
-    - ux
-    - ui
-    - design
-spec:
-  type: team
-  parent: product
-  profile:
-    displayName: UX Design Team
-    email: design@company.com
-    picture: https://avatars.githubusercontent.com/u/012345?s=200&v=4
+    email: backend@example.com
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: devops-team
-  description: |
-    DevOps and SRE team responsible for infrastructure, CI/CD pipelines,
-    monitoring, and production reliability.
-  tags:
-    - devops
-    - sre
-    - infrastructure
+  title: DevOps Team
+  description: "Team responsible for infrastructure and deployment"
 spec:
   type: team
   parent: engineering
   profile:
     displayName: DevOps Team
-    email: devops@company.com
-    picture: https://avatars.githubusercontent.com/u/123456?s=200&v=4
+    email: devops@example.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: john-doe
+  title: Senior Frontend Engineer
+  description: "Lead frontend developer with 5+ years experience"
+spec:
+  profile:
+    displayName: John Doe
+    email: john.doe@example.com
+    picture: https://example.com/john.jpg
+  memberOf: [frontend-team, engineering]
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jane-smith
+  title: Backend Architect
+  description: "Senior backend engineer specializing in microservices"
+spec:
+  profile:
+    displayName: Jane Smith
+    email: jane.smith@example.com
+    picture: https://example.com/jane.jpg
+  memberOf: [backend-team, engineering]
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: mike-johnson
+  title: DevOps Lead
+  description: "Infrastructure and deployment specialist"
+spec:
+  profile:
+    displayName: Mike Johnson
+    email: mike.johnson@example.com
+    picture: https://example.com/mike.jpg
+  memberOf: [devops-team, engineering]
