@@ -5,7 +5,7 @@ metadata:
   description: The place to be, for great artists
   annotations:
     backstage.io/techdocs-ref: dir:.
-    github.com/project-slug: OrkoHubter/pep8speaks
+    github.com/project-slug: backstage/demo
 spec:
   type: service
   lifecycle: production
