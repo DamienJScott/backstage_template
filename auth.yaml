@@ -22,6 +22,7 @@ metadata:
   description: "team responsible for frontend development and UI/UX"
 spec:
   type: team
+  children: [xiong-jian, wen-peng]
   parent: engineering
   profile:
     displayName: Frontend team
@@ -37,6 +38,7 @@ metadata:
 spec:
   type: team
   parent: engineering
+  children: [zi-yang]
   profile:
     displayName: Backend team
     email: backend@example.com
@@ -50,6 +52,7 @@ metadata:
   description: "team responsible for infrastructure and deployment"
 spec:
   type: team
+  children: [shi-kai]
   parent: engineering
   profile:
     displayName: DevOps team
@@ -107,7 +110,7 @@ metadata:
 spec:
   profile:
     displayName: Shi Kai
-    email: shikai@example.com
+    email: shikaiz@ncsi.com.cn
     picture: https://example.com/mike.jpg
   memberOf: [devops-team, engineering]
 
@@ -121,6 +124,6 @@ metadata:
 spec:
   profile:
     displayName: Nie Fang
-    email: niefang@example.com
+    email: fang.nie@ncsi.com.cn
     picture: https://example.com/mike.jpg
   memberOf: [backend-team, engineering]
