@@ -9,5 +9,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: artist-relations-team
+  owner: zi-yang
   system: public-websites
